@@ -892,6 +892,53 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@bit/primefaces.primereact.button@^3.1.0":
+  version "3.1.0"
+  resolved "https://node.bitsrc.io/primefaces.primereact.button/-/primefaces.primereact.button-3.1.0.tgz#6b611240328460497a6565ab1a62e478ba9b034b"
+  integrity sha1-a2ESQDKEYEl6ZWWrGmLkeLqbA0s=
+  dependencies:
+    "@bit/primefaces.primereact.internal.utild" "3.1.0"
+    "@bit/primefaces.primereact.tooltip" "3.1.0"
+    classnames "^2.2.6"
+    prop-types "^15.6.2"
+    react "^16.6.3"
+
+"@bit/primefaces.primereact.inputtext@^3.1.0":
+  version "3.1.0"
+  resolved "https://node.bitsrc.io/primefaces.primereact.inputtext/-/primefaces.primereact.inputtext-3.1.0.tgz#c39d2303eebc8e0a7fb85c2d0b96b7ba107086ce"
+  integrity sha1-w50jA+68jgp/uFwtC5a3uhBwhs4=
+  dependencies:
+    "@bit/primefaces.primereact.keyfilter" "3.1.0"
+    "@bit/primefaces.primereact.tooltip" "3.1.0"
+    "@bit/primefaces.primereact.utils.dom-handler" "3.1.0"
+    classnames "^2.2.6"
+    prop-types "^15.6.2"
+    react "^16.6.3"
+
+"@bit/primefaces.primereact.internal.utild@3.1.0":
+  version "3.1.0"
+  resolved "https://node.bitsrc.io/primefaces.primereact.internal.utild/-/primefaces.primereact.internal.utild-3.1.0.tgz#645a984221b617733266489c76ca23815e6c683a"
+  integrity sha1-ZFqYQiG2F3MyZkicdsojgV5saDo=
+
+"@bit/primefaces.primereact.keyfilter@3.1.0":
+  version "3.1.0"
+  resolved "https://node.bitsrc.io/primefaces.primereact.keyfilter/-/primefaces.primereact.keyfilter-3.1.0.tgz#b23d691eb6d4f5068ec822d3b2e378ac4c55714a"
+  integrity sha1-sj1pHrbU9QaOyCLTsuN4rExVcUo=
+  dependencies:
+    "@bit/primefaces.primereact.utils.dom-handler" "3.1.0"
+
+"@bit/primefaces.primereact.tooltip@3.1.0":
+  version "3.1.0"
+  resolved "https://node.bitsrc.io/primefaces.primereact.tooltip/-/primefaces.primereact.tooltip-3.1.0.tgz#4513c37f9e7204c7b692e79afe51f5a31e672c87"
+  integrity sha1-RRPDf55yBMe2kuea/lH1ox5nLIc=
+  dependencies:
+    "@bit/primefaces.primereact.utils.dom-handler" "3.1.0"
+
+"@bit/primefaces.primereact.utils.dom-handler@3.1.0":
+  version "3.1.0"
+  resolved "https://node.bitsrc.io/primefaces.primereact.utils.dom-handler/-/primefaces.primereact.utils.dom-handler-3.1.0.tgz#c76ccdd1ad283cda3697ecc4dfc08434f3136ba4"
+  integrity sha1-x2zN0a0oPNo2l+zE38CENPMTa6Q=
+
 "@cnakazawa/watch@^1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@cnakazawa/watch/-/watch-1.0.3.tgz#099139eaec7ebf07a27c1786a3ff64f39464d2ef"
@@ -2492,6 +2539,11 @@ class-utils@^0.3.5:
     define-property "^0.2.5"
     isobject "^3.0.0"
     static-extend "^0.1.1"
+
+classnames@^2.2.6:
+  version "2.2.6"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
+  integrity sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==
 
 clean-css@4.2.x:
   version "4.2.1"
@@ -8216,7 +8268,7 @@ react-scripts@3.0.1:
   optionalDependencies:
     fsevents "2.0.6"
 
-react@^16.8.6:
+react@^16.6.3, react@^16.8.6:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react/-/react-16.8.6.tgz#ad6c3a9614fd3a4e9ef51117f54d888da01f2bbe"
   integrity sha512-pC0uMkhLaHm11ZSJULfOBqV4tIZkx87ZLvbbQYunNixAAvjnC+snJCg0XQXn9VIsttVsbZP/H/ewzgsd5fxKXw==
@@ -10449,3 +10501,8 @@ yargs@^7.0.0:
     which-module "^1.0.0"
     y18n "^3.2.1"
     yargs-parser "^5.0.0"
+
+yarn@^1.16.0:
+  version "1.16.0"
+  resolved "https://registry.yarnpkg.com/yarn/-/yarn-1.16.0.tgz#5701b58ac555ff91f7b889b7d791b3dc86f8f999"
+  integrity sha512-cfemyGlnWKA1zopUUgebTPf8C4WkPIZ+TJmklwcEAJ4u6oWPtJeAzrsamaGGh/+b1XWe8W51yzAImC4AWbWR1g==

@@ -1,11 +1,13 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import Game from './components/Game';
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <Game size={[5, 10]} />
+      <div className="TicTacToe">
+        <Game />
+      </div>
     </div>
   );
 }

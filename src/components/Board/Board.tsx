@@ -4,7 +4,7 @@ import winnerCalc from '../WinnerCalc'
 import './style.scss'
 
 type State = { matrix: string[][], turn: string, status: string }
-type Props = { rows: number, columns: number }
+type Props = { rows: number, columns: number, minToWin: number }
 
 class Board extends Component<Props, State> {
     state = {
@@ -32,7 +32,7 @@ class Board extends Component<Props, State> {
         let turn = this.state.turn;
         matrix[row][column] = turn;
         this.setState({ matrix: matrix, turn: turn === 'X' ? 'O' : 'X' });
-        const winner = winnerCalc(matrix, this.props.rows, this.props.columns, 3, row, column);
+        const winner = winnerCalc(matrix, this.props.rows, this.props.columns, this.props.minToWin, row, column);
         console.log(`the winner is: ${winner}`);
     }
 
