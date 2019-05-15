@@ -2,6 +2,12 @@
     display: grid;
     float: left;
     margin: 20px;
+    .status {
+        text-align: center;
+        font-weight: bold;
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
     .row {
         float: left;
     }

@@ -71,12 +71,14 @@ class Game extends Component<Props, State> {
     }
 
     PlayBtnClick = () => {
-        if(this.state.rows > 0 || this.state.columns > 0)
+        const { rows, columns, minToWin } = this.state;
+        const max = rows > columns ? rows : columns;
+        if(rows > 0 && columns > 0 && minToWin > 0 && minToWin <= max)
             this.setState({goodValues: true});
     }
 
     SetValue = (key: string, value: string) => {
-        this.setState({[key]: value ? parseInt(value) : ''} as any);
+        this.setState({[key]: value && parseInt(value[0]) !== 0 ? parseInt(value) : ''} as any);
     }
 
     render() {
