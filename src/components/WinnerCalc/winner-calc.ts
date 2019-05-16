@@ -1,6 +1,6 @@
 /**
  * @description
- * check winner horizontal and vertical
+ * check winner horizontal, vertical and diagonal
  * @param {Array.<string[]>} matrix 2d array with X and O 
  * @param {number} rowsNum number of rows
  * @param {number} colsNum number of columns

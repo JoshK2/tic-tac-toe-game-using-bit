@@ -5,19 +5,17 @@
     "dependencies": {
         "@bit/primefaces.primereact.button": "^3.1.0",
         "@bit/primefaces.primereact.inputtext": "^3.1.0",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "react-scripts": "3.0.1",
+        "yarn": "^1.16.0",
+        "node-sass": "^4.12.0"
+    },
+    "devDependencies": {
         "@types/jest": "24.0.12",
         "@types/node": "12.0.0",
         "@types/react": "16.8.17",
         "@types/react-dom": "16.8.4",
-        "node-sass": "^4.12.0",
-        "react-scripts": "3.0.1",
-        "yarn": "^1.16.0"
-    },
-    "peerDependencies": {
-        "react": "^16.8.6",
-        "react-dom": "^16.8.6"
-    },
-    "devDependencies": {
         "typescript": "3.4.5"
     },
     "scripts": {
