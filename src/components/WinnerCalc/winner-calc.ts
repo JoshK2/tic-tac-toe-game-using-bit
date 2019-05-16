@@ -1,47 +1,162 @@
+/**
+ * @description
+ * check winner horizontal and vertical
+ * @param {Array.<string[]>} matrix 2d array with X and O 
+ * @param {number} rowsNum number of rows
+ * @param {number} colsNum number of columns
+ * @param {number} numToWin the number of matching to win
+ * @param {number} lastRow the row number of the square player click
+ * @param {number} lastCol the column number of the square player click
+ * @returns {string} return the winner, X or O or '' if no one win. 
+ */
 
-function winnerCalc(matrix: string[][], rowsNum: number, colsNum: number, numToWin: number, lastRow: number, lastCol: number): string {
+function winnerCalc(matrix: Array<Array<string>>, rowsNum: number, colsNum: number, numToWin: number, lastRow: number, lastCol: number): string {
     let winner: string = '';
     let match: number = 0;
     const lastValue: string = matrix[lastRow][lastCol];
 
     //check Horizontal
-    for (let c = 0; c < colsNum; c++)
-    {
+    for (let c = 0; c < colsNum; c++) {
         let currentValue = matrix[lastRow][c];
         if (currentValue === lastValue)
             match++;
         else match = 0;
-        if(match === numToWin)
-        {
+        if (match === numToWin) {
             winner = lastValue;
             break;
         }
     }
     if (winner !== '')
-    {
         return winner;
-    }
 
     match = 0;
     //check Vertical
-    for (let r = 0; r < rowsNum; r++)
-    {
+    for (let r = 0; r < rowsNum; r++) {
         let currentValue = matrix[r][lastCol];
         if (currentValue === lastValue)
             match++;
         else match = 0;
-        if (match === numToWin)
-        {
+        if (match === numToWin) {
             winner = lastValue;
             break;
         }
     }
     if (winner !== '')
-    {
         return winner;
+
+    //check diagonal top-left to bottom-right - include middle
+    match = 0;
+    for (let r = 0; r <= rowsNum - numToWin; r++)
+    {
+        let rowPosition = r;
+        for (let column = 0; column < colsNum && rowPosition < rowsNum; column++)
+        {
+            const currentValue = matrix[rowPosition][column];
+            if (currentValue === lastValue)
+                match++;
+            else match = 0;
+            if (match === numToWin)
+            {
+                winner = lastValue;
+                break;
+            }
+            rowPosition++;
+        }
+        if (winner !== '') break;
+    }
+    if (winner !== '')
+        return winner;
+
+    //check diagonal top-left to bottom-right - after middle
+    match = 0;
+    for (let c = 1; c <= colsNum - numToWin; c++)
+    {
+        let columnPosition = c;
+        for (let row = 0; row < rowsNum && columnPosition < colsNum; row++)
+        {
+            let currentValue = matrix[row][columnPosition];
+            if (currentValue === lastValue)
+                match++;
+            else match = 0;
+            if (match === numToWin)
+            {
+                winner = lastValue;
+                break;
+            }
+            columnPosition++;
+        }
+        if (winner !== '') break;
+    }
+    if (winner !== '')
+        return winner;
+
+    //check diagonal bottom-left to top-right - include middle
+    match = 0;
+    for (let r = rowsNum - 1; r >= rowsNum - numToWin; r--)
+    {
+        let rowPosition = r;
+        for (let column = 0; column < colsNum && rowPosition < rowsNum && rowPosition >= 0; column++)
+        {
+            let currentValue = matrix[rowPosition][column];
+            if (currentValue === lastValue)
+                match++;
+            else match = 0;
+            if (match === numToWin)
+            {
+                winner = lastValue;
+                break;
+            }
+            rowPosition--;
+        }
+        if (winner !== '') break;
+    }
+    if (winner !== '')
+        return winner;
+
+    //check diagonal bottom-left to top-right - after middle
+    match = 0;
+    for (let c = 1; c < colsNum; c++)
+    {
+        let columnPosition = c;
+        for (let row = rowsNum - 1; row < rowsNum && columnPosition < colsNum && columnPosition >= 1; row--)
+        {
+            let currentValue = matrix[row][columnPosition];
+            if (currentValue === lastValue)
+                match++;
+            else match = 0;
+            if (match === numToWin)
+            {
+                winner = lastValue;
+                break;
+            }
+            columnPosition++;
+        }
+        if (winner !== '') break;
+    }
+    if (winner !== '')
+        return winner;
+
+    if(emptyCell(matrix, rowsNum, colsNum) === false) {
+        winner = '-1';
     }
 
     return winner;
+}
+
+function emptyCell(matrix: Array<Array<string>>, rowsNum: number, colsNum: number): boolean {
+    let empty: boolean = false;
+    for (let x = 0; x < rowsNum; x++) {
+        for (let y = 0; y < colsNum; y++) {
+            const element = matrix[x][y];
+            if (element !== null) {
+                empty = true;
+                break;
+            }
+        }
+        if (empty)
+            break;
+    }
+    return empty;
 }
 
 export default winnerCalc

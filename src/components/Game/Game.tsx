@@ -17,12 +17,12 @@ class Game extends Component<Props, State> {
     }
 
     StartGame() {
-        return <><Board rows={this.state.rows} columns={this.state.columns} minToWin={this.state.minToWin} /><div style={{ clear: 'both' }}></div></>
+        return <><Board rows={this.state.rows} cols={this.state.columns} numToWin={this.state.minToWin} /><div style={{ clear: 'both' }}></div></>
     }
 
     ConfigGame() {
         return (
-            <div>
+            <div className="config">
                 <PrimereactStyle />
                 <h3>Set rows and columns number to start playing</h3>
                 <div className="input-value">
@@ -66,6 +66,7 @@ class Game extends Component<Props, State> {
                     />
                     <div style={{ clear: 'both' }}></div>
                 </div>
+                <div style={{clear: 'both'}}></div>
             </div>
         )
     }
