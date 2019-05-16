@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Board from '../Board'
 import './style.scss'
-import PrimereactStyle from './PrimereactStyle'
+import PrimereactStyle from '../PrimereactStyle'
 import { InputText } from '@bit/primefaces.primereact.inputtext'
 import { Button } from '@bit/primefaces.primereact.button'
 

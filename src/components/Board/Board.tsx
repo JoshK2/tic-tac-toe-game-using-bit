@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Square from '../Square'
 import winnerCalc from '../WinnerCalc'
 import './style.scss'
-import PrimereactStyle from '../Game/PrimereactStyle'
+import PrimereactStyle from '../PrimereactStyle'
 import { Button } from '@bit/primefaces.primereact.button'
 
 type State = { matrix: Array<Array<string>>, turn: string, winner: string }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class Style extends Component {
+class Style extends Component {
     render() {
         return (
             <div>
@@ -11,3 +11,5 @@ export default class Style extends Component {
         )
     }
 }
+
+export default Style
