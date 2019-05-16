@@ -1,5 +1,4 @@
 import { expect } from 'chai'
-import 'mocha'
 import haveEmptyCell from './have-empty-cell'
 
 describe('haveEmptyCell cell function', () => {
