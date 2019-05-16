@@ -52,8 +52,8 @@ class Board extends Component<Props, State> {
         if (winner !== '') {
             if (winner === '-1') {
                 status = `Draw!`;
-            } else {
-                status = `The winner is ${turn === 'X' ? 'O' : 'X'}`;
+            } else if (winner === 'X' || winner === 'O') {
+                status = `The winner is ${winner}`;
             }
         }
         return (
