@@ -42,7 +42,25 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "joshk.tic-tac-toe-game/board@0.1.1": {
+    "joshk.tic-tac-toe-game/internal/primereact-style@0.1.0": {
+        "files": [
+            {
+                "relativePath": "src/components/PrimereactStyle/Style.tsx",
+                "test": false,
+                "name": "Style.tsx"
+            },
+            {
+                "relativePath": "src/components/PrimereactStyle/index.ts",
+                "test": false,
+                "name": "index.ts"
+            }
+        ],
+        "mainFile": "src/components/PrimereactStyle/index.ts",
+        "trackDir": "src/components/PrimereactStyle",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "joshk.tic-tac-toe-game/board@0.1.2": {
         "files": [
             {
                 "relativePath": "src/components/Board/Board.tsx",
@@ -65,17 +83,12 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "joshk.tic-tac-toe-game/game@0.1.1": {
+    "joshk.tic-tac-toe-game/game@0.1.2": {
         "files": [
             {
                 "relativePath": "src/components/Game/Game.tsx",
                 "test": false,
                 "name": "Game.tsx"
-            },
-            {
-                "relativePath": "src/components/Game/PrimereactStyle.tsx",
-                "test": false,
-                "name": "PrimereactStyle.tsx"
             },
             {
                 "relativePath": "src/components/Game/index.ts",
