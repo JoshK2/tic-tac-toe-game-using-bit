@@ -1,49 +1,58 @@
 {
-    "name": "tic-tac-toe-game-using-bit",
-    "version": "0.1.0",
-    "private": true,
-    "dependencies": {
-        "@bit/primefaces.primereact.button": "^3.1.0",
-        "@bit/primefaces.primereact.inputtext": "^3.1.0",
-        "react": "^16.8.6",
-        "react-dom": "^16.8.6",
-        "react-scripts": "3.0.1",
-        "yarn": "^1.16.0",
-        "node-sass": "^4.12.0"
+  "name": "tic-tac-toe-game-using-bit",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@bit/primefaces.primereact.button": "^3.1.0",
+    "@bit/primefaces.primereact.inputtext": "^3.1.0",
+    "node-sass": "^4.12.0",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1",
+    "yarn": "^1.16.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/expect": "^1.20.4",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "12.0.0",
+    "@types/react": "16.8.17",
+    "@types/react-dom": "16.8.4",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "ts-mocha": "^6.0.0",
+    "ts-node": "^8.1.0",
+    "typescript": "3.4.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "ts-mocha -p tsconfig.spec.json src/components/**/*.spec.ts",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "bit": {
+    "env": {
+      "compiler": "bit.envs/compilers/react-typescript@3.0.1",
+      "tester": "bit.envs/testers/mocha@5.0.2"
     },
-    "devDependencies": {
-        "@types/jest": "24.0.12",
-        "@types/node": "12.0.0",
-        "@types/react": "16.8.17",
-        "@types/react-dom": "16.8.4",
-        "typescript": "3.4.5"
-    },
-    "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject"
-    },
-    "eslintConfig": {
-        "extends": "react-app"
-    },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
-    },
-    "bit": {
-        "env": {
-            "compiler": "bit.envs/compilers/react-typescript@3.0.1"
-        },
-        "componentsDefaultDirectory": "components/{name}",
-        "packageManager": "npm"
-    }
+    "componentsDefaultDirectory": "components/{name}",
+    "packageManager": "npm"
+  }
 }

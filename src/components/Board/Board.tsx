@@ -1,27 +1,29 @@
 import React, { Component } from 'react'
+import Game from '../Game'
 import Square from '../Square'
-import winnerCalc from '../WinnerCalc'
+import winnerCalc from '../utils/WinnerCalc'
 import './style.scss'
 import PrimereactStyle from '../PrimereactStyle'
 import { Button } from '@bit/primefaces.primereact.button'
 
-type State = { matrix: Array<Array<string>>, turn: string, winner: string }
+type State = { matrix: Array<Array<string>>, turn: string, winner: string, restart: boolean }
 type Props = { rows: number, cols: number, numToWin: number }
 
 class Board extends Component<Props, State> {
     state = {
         matrix: new Array(this.props.rows).fill(null).map(item => (new Array(this.props.cols).fill(null))),
         turn: 'X',
-        winner: ''
+        winner: '',
+        restart: false
     }
-    
+
     createBoard = () => {
         let board = [];
         let matrix = this.state.matrix;
         for (let r = 0; r < this.props.rows; r++) {
             let row = [];
             for (let c = 0; c < this.props.cols; c++) {
-                row.push(<Square row={r} col={c} key={r + c} setValue={this.handleSetValue} value={matrix[r][c]} enable={this.state.winner !== ''} />);
+                row.push(<Square row={r} col={c} key={r + c} setValue={this.handleSetValue} value={matrix[r][c]} disable={this.state.winner === 'X' || this.state.winner === 'O'} />);
             }
             board.push(<div className="row" key={"row" + r}>{row}</div>);
         }
@@ -38,16 +40,14 @@ class Board extends Component<Props, State> {
     }
 
     restartGame = () => {
-        this.setState({
-            matrix: new Array(this.props.rows).fill(null).map(item => (new Array(this.props.cols).fill(null))),
-            turn: this.state.turn === 'X' ? 'O' : 'X',
-            winner: ''
-        });
+        this.setState({ restart: true });
     }
 
     render() {
         console.log(this.state.matrix);
-        const { turn, winner } = this.state;
+        const { turn, winner, restart } = this.state;
+        if (restart)
+            return <Game />
         let status: any = `Next player: ${turn}`;
         if (winner !== '') {
             if (winner === '-1') {

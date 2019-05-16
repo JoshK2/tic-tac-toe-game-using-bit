@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './style.scss'
 
 type State = { clicked: boolean }
-type Props = { row: number, col: number, setValue: Function, value: string, enable: boolean }
+type Props = { row: number, col: number, setValue: Function, value: string, disable: boolean }
 
 class Square extends Component<Props, State> {
     state = {
@@ -10,8 +10,8 @@ class Square extends Component<Props, State> {
     }
 
     componentWillReceiveProps(nextProps: any) {
-        if (nextProps.enable !== this.props.enable) {
-            this.setState({ clicked: nextProps.enable });
+        if (nextProps.disable === true) {
+            this.setState({ clicked: true });
         }
     }
 

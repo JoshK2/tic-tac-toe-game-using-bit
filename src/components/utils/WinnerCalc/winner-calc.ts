@@ -10,6 +10,8 @@
  * @returns {string} return the winner, X or O or '' if no one win. 
  */
 
+import haveEmptyCell from '../HaveEmptyCell'
+
 function winnerCalc(matrix: Array<Array<string>>, rowsNum: number, colsNum: number, numToWin: number, lastRow: number, lastCol: number): string {
     let winner: string = '';
     let match: number = 0;
@@ -136,27 +138,11 @@ function winnerCalc(matrix: Array<Array<string>>, rowsNum: number, colsNum: numb
     if (winner !== '')
         return winner;
 
-    if(emptyCell(matrix, rowsNum, colsNum) === false) {
+    if(haveEmptyCell(matrix, rowsNum, colsNum) === false) {
         winner = '-1';
     }
 
     return winner;
-}
-
-function emptyCell(matrix: Array<Array<string>>, rowsNum: number, colsNum: number): boolean {
-    let empty: boolean = false;
-    for (let x = 0; x < rowsNum; x++) {
-        for (let y = 0; y < colsNum; y++) {
-            const element = matrix[x][y];
-            if (element !== null) {
-                empty = true;
-                break;
-            }
-        }
-        if (empty)
-            break;
-    }
-    return empty;
 }
 
 export default winnerCalc
