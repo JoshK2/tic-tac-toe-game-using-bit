@@ -42,29 +42,6 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "joshk.tic-tac-toe-game/utils/winner-calc@1.0.0": {
-        "files": [
-            {
-                "relativePath": "src/components/utils/WinnerCalc/index.ts",
-                "test": false,
-                "name": "index.ts"
-            },
-            {
-                "relativePath": "src/components/utils/WinnerCalc/winner-calc.spec.ts",
-                "test": true,
-                "name": "winner-calc.spec.ts"
-            },
-            {
-                "relativePath": "src/components/utils/WinnerCalc/winner-calc.ts",
-                "test": false,
-                "name": "winner-calc.ts"
-            }
-        ],
-        "mainFile": "src/components/utils/WinnerCalc/index.ts",
-        "trackDir": "src/components/utils/WinnerCalc",
-        "origin": "AUTHORED",
-        "exported": true
-    },
     "joshk.tic-tac-toe-game/square@1.0.0": {
         "files": [
             {
@@ -88,7 +65,30 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "joshk.tic-tac-toe-game/board@1.0.0": {
+    "joshk.tic-tac-toe-game/utils/winner-calc@1.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/utils/WinnerCalc/index.ts",
+                "test": false,
+                "name": "index.ts"
+            },
+            {
+                "relativePath": "src/components/utils/WinnerCalc/winner-calc.spec.ts",
+                "test": true,
+                "name": "winner-calc.spec.ts"
+            },
+            {
+                "relativePath": "src/components/utils/WinnerCalc/winner-calc.ts",
+                "test": false,
+                "name": "winner-calc.ts"
+            }
+        ],
+        "mainFile": "src/components/utils/WinnerCalc/index.ts",
+        "trackDir": "src/components/utils/WinnerCalc",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "joshk.tic-tac-toe-game/board@1.0.1": {
         "files": [
             {
                 "relativePath": "src/components/Board/Board.tsx",
@@ -111,7 +111,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "joshk.tic-tac-toe-game/game@1.0.0": {
+    "joshk.tic-tac-toe-game/game@1.0.1": {
         "files": [
             {
                 "relativePath": "src/components/Game/Game.tsx",
