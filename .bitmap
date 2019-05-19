@@ -88,7 +88,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "joshk.tic-tac-toe-game/board@0.1.5": {
+    "joshk.tic-tac-toe-game/board@0.1.6": {
         "files": [
             {
                 "relativePath": "src/components/Board/Board.tsx",
@@ -111,7 +111,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "joshk.tic-tac-toe-game/game@0.1.5": {
+    "joshk.tic-tac-toe-game/game@0.1.6": {
         "files": [
             {
                 "relativePath": "src/components/Game/Game.tsx",
