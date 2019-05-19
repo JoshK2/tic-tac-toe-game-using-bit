@@ -7,8 +7,26 @@ import PrimereactStyle from '../PrimereactStyle'
 import { Button } from '@bit/primefaces.primereact.button'
 
 type State = { matrix: Array<Array<string>>, turn: string, winner: string, restart: boolean }
-type Props = { rows: number, cols: number, numToWin: number }
+type Props = { 
+    /** number of rows in 2d array */
+    rows: number, 
+    /** number of columns in 2d array */
+    cols: number, 
+    /** number of matching value to win */
+    numToWin: number 
+}
 
+/**
+ * @description
+ * Board generate dynamic 2d array by props, and manage player turn and check fo winner.
+ * @example
+ * import React from 'react';
+ * import Board from '@bit/joshk.tic-tac-toe-game.board';
+ *
+ * export default (
+ *   <Board rows={3} cols={3} numToWin={3} />
+ * )
+ */
 class Board extends Component<Props, State> {
     state = {
         matrix: new Array(this.props.rows).fill(null).map(item => (new Array(this.props.cols).fill(null))),
@@ -23,7 +41,7 @@ class Board extends Component<Props, State> {
         for (let r = 0; r < this.props.rows; r++) {
             let row = [];
             for (let c = 0; c < this.props.cols; c++) {
-                row.push(<Square row={r} col={c} key={r + c} setValue={this.handleSetValue} value={matrix[r][c]} disable={this.state.winner === 'X' || this.state.winner === 'O'} />);
+                row.push(<Square color="purple" row={r} col={c} key={r + c} setValue={this.handleSetValue} value={matrix[r][c]} disable={this.state.winner === 'X' || this.state.winner === 'O'} />);
             }
             board.push(<div className="row" key={"row" + r}>{row}</div>);
         }

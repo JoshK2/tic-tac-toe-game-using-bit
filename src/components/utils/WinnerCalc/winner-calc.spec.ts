@@ -74,7 +74,7 @@ describe('Winner check function', () => {
         const result = winnerCalc(matrix, 3, 3, 3, 0, 2);
         expect(result).to.equal('O');
     });
-    it('should return winner in diagonal top left - bottom right', () => {
+    it('should return winner in diagonal bottom right - top left', () => {
         const matrix = [
             ['O', 'X', 'X'],
             ['X', 'O', 'O'],
@@ -83,7 +83,7 @@ describe('Winner check function', () => {
         const result = winnerCalc(matrix, 3, 3, 3, 0, 0);
         expect(result).to.equal('O');
     });
-    it('should return winner in diagonal top right - bottom left', () => {
+    it('should return winner in diagonal bottom left - top right', () => {
         const matrix = [
             ['X', 'O', 'O'],
             ['X', 'O', 'X'],
@@ -91,5 +91,19 @@ describe('Winner check function', () => {
         ];
         const result = winnerCalc(matrix, 3, 3, 3, 2, 0);
         expect(result).to.equal('O');
+    });
+    it('should return winner in diagonal', () => {
+        const matrix = [
+            ['', '', '', 'X', 'O', '', '', ''],
+            ['', '', 'X', 'O', '', '', '', ''],
+            ['', 'X', 'O', 'O', '', '', '', ''],
+            ['X', '', '', '', '', '', '', ''],
+            ['', '', '', '', '', '', '', ''],
+            ['', '', '', '', '', '', '', ''],
+            ['', '', '', '', '', '', '', ''],
+            ['', '', '', '', '', '', '', '']
+        ];
+        const result = winnerCalc(matrix, 8, 8, 4, 3, 0);
+        expect(result).to.equal('X');
     });
 });

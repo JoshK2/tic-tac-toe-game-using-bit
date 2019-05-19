@@ -8,6 +8,18 @@ import { Button } from '@bit/primefaces.primereact.button'
 type State = { rows: number, columns: number, minToWin: number, goodValues: boolean }
 type Props = {}
 
+/**
+ * @description
+ * Game component is the main component of the game with configuration options like rows, columns, match number to win.
+ * After config set, click Play and enjoy.
+ * @example
+ * import React from 'react';
+ * import Game from '@bit/joshk.tic-tac-toe-game.game';
+ * 
+ * export default (
+ *   <Game />
+ * )
+ */
 class Game extends Component<Props, State> {
     state = {
         rows: 0,

@@ -8,6 +8,17 @@
  * @param {number} lastRow the row number of the square player click
  * @param {number} lastCol the column number of the square player click
  * @returns {string} return the winner, X or O or '' if no one win. 
+ * @example
+ * import winnerCalc from '@bit/joshk.tic-tac-toe-game.utils.winner-calc';
+ *
+ * const matrix = [
+ *   ['O', 'O', 'X'],
+ *   ['O', 'X', ''],
+ *   ['X', '', '']
+ * ];
+ * const result = winnerCalc(matrix, 3, 3, 3, 0, 2);
+ *
+ * export default result
  */
 
 import haveEmptyCell from '../HaveEmptyCell'
@@ -94,7 +105,7 @@ function winnerCalc(matrix: Array<Array<string>>, rowsNum: number, colsNum: numb
 
     //check diagonal bottom-left to top-right - include middle
     match = 0;
-    for (let r = rowsNum - 1; r >= rowsNum - numToWin; r--)
+    for (let r = rowsNum - 1; r >= rowsNum - numToWin - 1; r--)
     {
         let rowPosition = r;
         for (let column = 0; column < colsNum && rowPosition < rowsNum && rowPosition >= 0; column++)
