@@ -131,8 +131,9 @@ function winnerCalc(matrix: Array<Array<string>>, rowsNum: number, colsNum: numb
     for (let c = 1; c < colsNum; c++)
     {
         let columnPosition = c;
-        for (let row = rowsNum - 1; row < rowsNum && columnPosition < colsNum && columnPosition >= 1; row--)
+        for (let row = rowsNum - 1; row < rowsNum && row >= 0 && columnPosition < colsNum && columnPosition >= 1; row--)
         {
+            console.log(`[${row}][${columnPosition}]`);
             let currentValue = matrix[row][columnPosition];
             if (currentValue === lastValue)
                 match++;

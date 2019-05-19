@@ -41,7 +41,7 @@ class Board extends Component<Props, State> {
         for (let r = 0; r < this.props.rows; r++) {
             let row = [];
             for (let c = 0; c < this.props.cols; c++) {
-                row.push(<Square color="purple" row={r} col={c} key={r + c} setValue={this.handleSetValue} value={matrix[r][c]} disable={this.state.winner === 'X' || this.state.winner === 'O'} />);
+                row.push(<Square row={r} col={c} key={r + c} setValue={this.handleSetValue} value={matrix[r][c]} disable={this.state.winner === 'X' || this.state.winner === 'O'} />);
             }
             board.push(<div className="row" key={"row" + r}>{row}</div>);
         }
