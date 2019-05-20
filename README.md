@@ -31,9 +31,9 @@ export default <Game />
 
 That's it!
 
-Each components IS used from [bit](https://bit.dev) to work less, and not create from scratch.
-
 ## Button and input text
+
+These components is used from [bit](https://bit.dev) to work less, and not create from scratch.
 
 ### PrimeReact
 [primereact input text component](https://bit.dev/primefaces/primereact/inputtext)   
