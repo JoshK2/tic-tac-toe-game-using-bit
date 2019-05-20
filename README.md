@@ -1,4 +1,4 @@
-# Modular Tic Tac Toe Game built with TypeScript and tested with Mocha
+# Modular Tic Tac Toe Game built with TypeScript and tested with Mocha [![components](https://img.shields.io/bit/collection/total-components/joshk/tic-tac-toe-game.svg)](https://bit.dev/joshk/tic-tac-toe-game)
 
 A simple Tic Tac Toe game build with TypeScript components and test with Mocha tester then shared them to [bit](https://bit.dev/joshk/tic-tac-toe-game) for testing in the live PlayGround and see the result of tests runnig in bit.  
 Allow users to consume the entire game or just a part of the game components using NPM and Yarn or using bit to consume and modify the component directly inside the project.  
