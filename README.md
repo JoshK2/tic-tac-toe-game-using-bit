@@ -11,6 +11,12 @@ Try the game in live PlayGround in the project [collection](https://bit.dev/josh
   <a href="https://bit.dev/joshk/tic-tac-toe-game"><img src="https://i.imagesup.co/images2/524e0b55c67eb5ae8a0ca15a76d54df9930a50c9.jpg"></a>
 </p>
 
+## Tutorial
+
+See the full tutorial- build your own modular application with React TypeScript components.
+
+**[Build a Tic Tac Toe App with TypeScript, React and Mocha](https://blog.bitsrc.io/build-a-tic-tac-toe-game-with-typescript-react-and-mocha-ce6f1e74c996)**.
+
 ## Import and use the entire game component in few seconds with NPM, Yarn and bit
 To install components from this project, first configure [bit.dev](https://bit.dev) as a scoped registry (one-time action).  
 ```
