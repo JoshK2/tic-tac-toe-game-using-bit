@@ -8,7 +8,7 @@
     "node-sass": "^4.12.0",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
-    "yarn": "^1.17.3"
+    "yarn": "^1.22.0"
   },
   "peerDependencies": {
     "react": "^16.8.6"
